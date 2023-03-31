@@ -98,7 +98,7 @@ class _TetrisScreenState extends State<TetrisScreen> {
     landedPieceColors = [
       for (var i = 0; i <= numberOfSquare; i++) backgroundColor
     ];
-    // startGame();
+    startGame();
   }
 
   void startGame() {
@@ -312,6 +312,8 @@ class _TetrisScreenState extends State<TetrisScreen> {
 
         if (count == 10) {
           setState(() {
+            score++;
+
             for (var element in removeRow) {
               landed.remove(element);
             }
